@@ -25,7 +25,7 @@ int main(void)
 	scanf("%d", &n); //変数nに探索したい値を入力
 	
 	i = binarySearch(x, n, 0, i - 1); //iはこの時点で要素数+1の値を持っているので-1してから渡す
-	if(i >= 0)
+	if(i >= 0) //返却値が0以上なら
 		printf("%dはx[%d]に格納されています\n", n, i);
 	else
 		printf("%dは見つかりません\n", n);
