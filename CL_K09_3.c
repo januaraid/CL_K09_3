@@ -51,12 +51,12 @@ int inputArray(char name[], int x[])
 
 int binarySearch(int x[], int n, int b, int e)
 {
-	int i = (b + e) / 2, pivot = x[i];
+	int i = (b + e) / 2, pivot = x[i]; //変数pivotに配列の中央値を代入
 	if(b > e)
-		return -1;
+		return -1; //回帰処理
 	if(n == pivot)
 		return i;
-	else if(n > pivot)
+	else if(n > pivot) //探索値が中央地より大きければ
 		return binarySearch(x, n, i + 1, e);
 	else
 		return binarySearch(x, n, b, i - 1);
